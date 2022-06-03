@@ -7,11 +7,18 @@
 
 # @lc code=start
 class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        # Set solution
+        return len(nums) != len(set(nums))
 
-  def containsDuplicate(self, nums: List[int]) -> bool:
-    a = len(nums)
-    b = len(set(nums))
-    return b < a
+        # Hashtable solution
+        h = {}
+        for i in nums:
+            if i not in h:
+                h[i] = 1
+            else:
+                return True
+        return False
 
 
 # @lc code=end

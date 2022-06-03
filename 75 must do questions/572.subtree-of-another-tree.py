@@ -33,8 +33,6 @@ class Solution:
             return (
                 self.isSameSubTree(root.left, subRoot.left)
                 and self.isSameSubTree(root.right, subRoot.right)
-                and self.isSameSubTree(root.right, subRoot.right)
-                and self.isSameSubTree(root.right, subRoot.right)
             )
 
         return False
